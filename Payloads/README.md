@@ -8,39 +8,39 @@ Each file in this repo serves a specific purpose in the security testing lifecyc
 
 ### 🔐 Password & Authentication
 
-- `10k-most-common-password.txt` - Top 10,000 common passwords.
-- `4-digi-otp-combinations-modified-by-aman.txt` - Customized 4-digit OTPs.
-- `4-digits-0000-9999.txt` - Complete 4-digit number range (0000-9999).
-- `6_digit_mix.txt` - 6-digit mixed pattern list.
-- `cirt-default-usernames.txt` - Default usernames from various vendors.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/10k-most-common-password.txt" target="_blank">10k-most-common-password.txt</a> – Top 10,000 common passwords.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/4-digi-otp-combinations-modified-by-aman.txt" target="_blank">4-digi-otp-combinations-modified-by-aman.txt</a> – Customized 4-digit OTPs.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/4-digits-0000-9999.txt" target="_blank">4-digits-0000-9999.txt</a> – Complete 4-digit number range (0000-9999).
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/6_digit_mix.txt" target="_blank">6_digit_mix.txt</a> – 6-digit mixed pattern list.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/cirt-default-usernames.txt" target="_blank">cirt-default-usernames.txt</a> – Default usernames from various vendors.
 
 ### 🐞 Web Exploitation Payloads
 
-- `12500-XSS-payloads.txt` - XSS payloads for fuzzing and bypasses.
-- `HTML5sec-Injections-Jhaddix.txt` - HTML5 attack vectors.
-- `LFI-Jhaddix-payloads.txt` - Local File Inclusion payloads.
-- `SSI-Injection-Jhaddix.txt` - Server-Side Includes (SSI) payloads.
-- `sql-payloads.txt` - SQL Injection payloads.
-- `command-injection.txt` - Payloads for command injection.
-- `open-redirect-payloads.txt` - Open redirect test strings.
-- `graphql.txt` - GraphQL fuzzing and introspection payloads.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/12500-XSS-payloads.txt" target="_blank">12500-XSS-payloads.txt</a> – XSS payloads for fuzzing and bypasses.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/HTML5sec-Injections-Jhaddix.txt" target="_blank">HTML5sec-Injections-Jhaddix.txt</a> – HTML5 attack vectors.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/LFI-Jhaddix-payloads.txt" target="_blank">LFI-Jhaddix-payloads.txt</a> – Local File Inclusion payloads.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/SSI-Injection-Jhaddix.txt" target="_blank">SSI-Injection-Jhaddix.txt</a> – Server-Side Includes (SSI) payloads.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/sql-payloads.txt" target="_blank">sql-payloads.txt</a> – SQL Injection payloads.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/command-injection.txt" target="_blank">command-injection.txt</a> – Payloads for command injection.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/open-redirect-payloads.txt" target="_blank">open-redirect-payloads.txt</a> – Open redirect test strings.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/graphql.txt" target="_blank">graphql.txt</a> – GraphQL fuzzing and introspection payloads.
 
 ### 🧭 Discovery & Enumeration
 
-- `combined_directories.txt` - Common directory paths.
-- `raft-large-directories-lowercase.txt` - Raft large directory wordlist (lowercase).
-- `raft-large-files.txt` - Raft large files wordlist.
-- `subdomains-top1million-110000.txt` - Top subdomains list (110k entries).
-- `subdomains-top1million-5000.txt` - Top 5k subdomains list.
-- `endpoints-payloads.txt` - Common API and web endpoints.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/combined_directories.txt" target="_blank">combined_directories.txt</a> – Common directory paths.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/raft-large-directories-lowercase.txt" target="_blank">raft-large-directories-lowercase.txt</a> – Raft large directory wordlist (lowercase).
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/raft-large-files.txt" target="_blank">raft-large-files.txt</a> – Raft large files wordlist.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/subdomains-top1million-110000.txt" target="_blank">subdomains-top1million-110000.txt</a> – Top subdomains list (110k entries).
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/subdomains-top1million-5000.txt" target="_blank">subdomains-top1million-5000.txt</a> – Top 5k subdomains list.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/endpoints-payloads.txt" target="_blank">endpoints-payloads.txt</a> – Common API and web endpoints.
 
 ### 📦 Misc
 
-- `master.txt` - Possibly a master wordlist or combo list.
-- `hydra.restore` - Saved session from Hydra (for resuming bruteforce).
-- `senstivejs.txt` - JavaScript files with potentially sensitive data.
-- `common-payloads.txt` - General-purpose payloads for testing.
-- `Subdomain-Takeover.html` - PoC template for subdomain takeover.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/master.txt" target="_blank">master.txt</a> – Possibly a master wordlist or combo list.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/hydra.restore" target="_blank">hydra.restore</a> – Saved session from Hydra (for resuming bruteforce).
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/senstivejs.txt" target="_blank">senstivejs.txt</a> – JavaScript files with potentially sensitive data.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/common-payloads.txt" target="_blank">common-payloads.txt</a> – General-purpose payloads for testing.
+- <a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/Subdomain-Takeover.html" target="_blank">Subdomain-Takeover.html</a> – PoC template for subdomain takeover.
 
 ---
 
@@ -48,11 +48,13 @@ Each file in this repo serves a specific purpose in the security testing lifecyc
 
 Use these payloads with tools like:
 
-- [`ffuf`](https://github.com/ffuf/ffuf)
-- [`Burp Suite`](https://portswigger.net/burp)
-- [`sqlmap`](https://sqlmap.org/)
-- [`wfuzz`](https://github.com/xmendez/wfuzz)
-- [`dirsearch`](https://github.com/maurosoria/dirsearch)
+- <a href="https://github.com/ffuf/ffuf" target="_blank">ffuf</a>
+- <a href="https://portswigger.net/burp" target="_blank">Burp Suite</a>
+- <a href="https://sqlmap.org/" target="_blank">sqlmap</a>
+- <a href="https://github.com/xmendez/wfuzz" target="_blank">wfuzz</a>
+- <a href="https://github.com/maurosoria/dirsearch" target="_blank">dirsearch</a>
+
+---
 
 ## ⚠️ Disclaimer
 
@@ -64,9 +66,7 @@ This repository is intended for **educational** and **authorized testing** only.
 
 Includes payloads and lists inspired by:
 
-- Jhaddix
-- SecLists
-- HTML5 Security Cheat Sheets
+- Jhaddix  
+- SecLists  
+- HTML5 Security Cheat Sheets  
 - Community contributions (and Aman 😉)
-
-
