@@ -1,71 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vault - Payloads Collection</title>
+  <link rel="icon" href="🔐">
+  <meta name="description" content="A curated collection of pentest payloads by Aman (luci-a-u)">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #f4f8fb;
+      --text: #0a0a0a;
+      --link: #007bff;
+      --header: #e7f1ff;
+      --nav: #dce7f7;
+      --border: #c0d4ec;
+
+      /* Add this for headings */
+      --heading: #111827;  /* Dark slate color */
+    }
+
+
+
+    [data-theme="dark"] {
+      --heading: #f0f6fc;
+      --bg: #0d1117;            /* Deep black background */
+      --text: #c9d1d9;          /* Light grey text */
+      --link: #58a6ff;          /* Blue accent links */
+      --header: #010409;        /* Extra dark header/nav */
+      --nav: #161b22;           /* Slightly lighter nav bar */
+      --border: #30363d;        /* Subtle blue-grey border */
+    }
+
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f8f9fa;
-      color: #333;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
     }
+
     header {
-      background: #212529;
+      background: var(--header);
       color: #fff;
       padding: 1em;
       text-align: center;
     }
+
     nav {
-      background: #343a40;
+      background: var(--nav);
       padding: 1em;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
+
     nav a {
-      color: #fff;
+      color: var(--text);
       margin-right: 1em;
       text-decoration: none;
     }
+
     main {
       padding: 2em;
       max-width: 960px;
       margin: auto;
     }
+
     section {
       margin-bottom: 3em;
     }
+
     h2 {
-      border-bottom: 2px solid #ddd;
+      border-bottom: 2px solid var(--border);
       padding-bottom: 0.4em;
       margin-top: 2em;
     }
+
     ul {
       list-style: square;
       padding-left: 1.2em;
     }
-    a {
-      color: #007bff;
+
+    :root {
+      --link: #3fb950; /* fresh green */
     }
+
+    /* Optional: slightly brighter green on hover */
+    a {
+      color: var(--link);
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #27ae60;
+    }
+
     a:hover {
       text-decoration: underline;
     }
+
     footer {
-      background: #212529;
+      background: var(--header);
       color: #ccc;
       text-align: center;
       padding: 1em;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--nav);
+      color: var(--text);
+      border: none;
+      padding: 0.5em 1em;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 0.9em;
+    }
+    h1, h2, h3, h4, h5, h6 {
+       color: #007bff; /* Bootstrap-style blue */
+    }
+    header p {
+      color: #222;
+      font-weight: 500;
+    }
+
+    [data-theme="dark"] header p {
+      color: #f0f6fc;
     }
   </style>
 </head>
 <body>
 
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark theme">🌙</button>
+
+
 <header>
   <h1>🔐 Vault - Payloads Collection</h1>
-  <p>A curated repository for pentesting, CTFs, bug bounty, and research</p>
+  <p>A curated collection of payloads for pentesting, CTFs, bug bounty, and research.</p>
 </header>
 
 <nav>
@@ -78,7 +154,6 @@
 </nav>
 
 <main>
-
   <section id="auth">
     <h2>🔐 Password & Authentication</h2>
     <ul>
@@ -155,6 +230,14 @@
 <footer>
   <p>⚠️ This is for educational and authorized testing purposes only. Use responsibly.</p>
 </footer>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    html.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+  }
+</script>
 
 </body>
 </html>
