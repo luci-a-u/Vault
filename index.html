@@ -1,105 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cybersecurity Vault</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vault by luci-a-u</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    :root {
+      --bg: #f8f9fa;
+      --text: #1c1c1c;
+      --link: #0066cc;
+      --title: #212121;
+      --border: #e0e0e0;
+      --heading: #0056b3;
+    }
+
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #e0e0e0;
+      --link: #66aaff;
+      --title: #ffffff;
+      --border: #333;
+      --heading: #66aaff;
+    }
+
     body {
-      font-family: 'Roboto Mono', monospace;
-      background-color: #0f0f0f;
-      color: #f1f1f1;
       margin: 0;
       padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
+
     header {
-      background: #111;
       padding: 1rem 2rem;
+      background-color: var(--bg);
+      border-bottom: 1px solid var(--border);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #333;
     }
-    nav a {
-      color: #00ffc8;
-      margin-left: 1rem;
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: var(--title);
+    }
+
+    .nav {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .nav a {
+      color: var(--link);
       text-decoration: none;
+      font-weight: 500;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .hero {
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
-    .section {
+
+    main {
       padding: 2rem;
-      border-top: 1px solid #222;
+      max-width: 900px;
+      margin: auto;
     }
-    .section h2 {
-      color: #00ffc8;
+
+    h2 {
+      color: var(--heading);
+      font-size: 1.5rem;
       margin-bottom: 1rem;
     }
-    .tool-list {
-      list-style: none;
-      padding: 0;
+
+    .section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: transform 0.3s ease;
     }
-    .tool-list li {
-      margin: 0.5rem 0;
+
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
-    .tool-list a {
-      color: #f1f1f1;
+
+    a {
+      color: var(--link);
       text-decoration: none;
     }
-    .tool-list a:hover {
-      color: #00ffc8;
-    }
-    footer {
+
+    .footer {
       text-align: center;
-      padding: 1rem;
-      background: #111;
-      border-top: 1px solid #333;
       font-size: 0.9rem;
-      color: #666;
+      color: var(--text);
+      padding: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .toggle {
+      cursor: pointer;
+      padding: 0.4rem 0.7rem;
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: var(--link);
     }
   </style>
 </head>
+
 <body>
   <header>
-    <div class="logo"><strong>Cybersecurity Vault</strong></div>
-    <nav>
+    <h1>Cybersecurity Vault</h1>
+    <div class="nav">
       <a href="index.html">Home</a>
-      <a href="Tools/Tools.html">Tools</a>
-      <a href="Payloads/Payloads.html">Payloads</a>
+      <a href="Tools.html">Tools</a>
+      <a href="Payloads.html">Payloads</a>
       <a href="Subdomain-Takeover.html">Takeovers</a>
-      <a href="https://github.com/luci-a-u/Vault" target="_blank">GitHub</a>
-    </nav>
+      <a href="https://github.com/luci-a-u/Vault">GitHub</a>
+      <button class="toggle" onclick="toggleTheme()" title="Toggle theme">🌙</button>
+    </div>
   </header>
 
-  <div class="hero">
-    <h1>Welcome to the Cybersecurity Vault</h1>
-    <p>A curated collection of real-world tools and techniques for security testing and ethical hacking.</p>
+  <main>
+    <section class="section">
+      <h2>Welcome to the Cybersecurity Vault</h2>
+      <p>A curated collection of real-world tools and techniques for security testing and ethical hacking.</p>
+    </section>
+
+    <section class="section">
+      <h2>Featured Sections</h2>
+      <ul>
+        <li>🛠 <a href="Tools.html">Tools Used in Real-World Pentests</a></li>
+        <li>🌐 <a href="Subdomain-Takeover.html">Subdomain Takeover Techniques</a></li>
+        <li>💣 <a href="Payloads.html">Payload Arsenal</a></li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Get Involved</h2>
+      <p>This is an open-source project under the MIT License. Contributions and feedback are welcome on <a href="https://github.com/luci-a-u/Vault">GitHub</a>.</p>
+    </section>
+  </main>
+
+  <div class="footer">
+    <p>&copy; 2025 <a href="https://github.com/luci-a-u">luci-a-u</a> | Hosted on GitHub Pages</p>
   </div>
 
-  <div class="section">
-    <h2>Featured Sections</h2>
-    <ul class="tool-list">
-      <li><a href="Tools/Tools.html">🛠 Tools Used in Real-World Pentests</a></li>
-      <li><a href="Subdomain-Takeover.html">🌐 Subdomain Takeover Techniques</a></li>
-    </ul>
-  </div>
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const theme = html.getAttribute("data-theme") === "light" ? "dark" : "light";
+      html.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    }
 
-  <footer>
-    &copy; 2025 luci-a-u | Hosted on GitHub Pages
-  </footer>
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    }
+  </script>
 </body>
+
 </html>
