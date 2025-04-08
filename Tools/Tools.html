@@ -75,7 +75,11 @@
 </head>
 <body>
 
-  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <button class="theme-toggle" onclick="toggleTheme()" id="theme-toggle">
+  🌙
+  </button>
+
+
 
   <h1>🛠️ Security Tools Reference</h1>
   <p>A curated list of tools for penetration testing, red teaming, OSINT, defense, mobile testing, and more.</p>
@@ -304,17 +308,28 @@
   <footer>
     Created with ❤️ by Aman | Powered by GitHub Pages
   </footer>
-
+  
   <script>
-    const toggleTheme = () => {
-      const currentTheme = document.documentElement.getAttribute("data-theme");
-      const newTheme = currentTheme === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", newTheme);
-      localStorage.setItem("theme", newTheme);
-    };
-    const savedTheme = localStorage.getItem("theme") || "light";
-    document.documentElement.setAttribute("data-theme", savedTheme);
-  </script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    updateToggleIcon();
+  }
 
+  function updateToggleIcon() {
+    const button = document.getElementById('theme-toggle');
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    button.textContent = isDark ? '☀️' : '🌙';
+  }
+
+  // On load: apply saved theme or default
+  (function () {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateToggleIcon();
+  })();
+</script>
 </body>
 </html>
