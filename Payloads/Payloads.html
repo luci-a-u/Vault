@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vault - Payloads Collection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #212529;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+    nav {
+      background: #343a40;
+      padding: 1em;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      margin-right: 1em;
+      text-decoration: none;
+    }
+    main {
+      padding: 2em;
+      max-width: 960px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 3em;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.4em;
+      margin-top: 2em;
+    }
+    ul {
+      list-style: square;
+      padding-left: 1.2em;
+    }
+    a {
+      color: #007bff;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background: #212529;
+      color: #ccc;
+      text-align: center;
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🔐 Vault - Payloads Collection</h1>
+  <p>A curated repository for pentesting, CTFs, bug bounty, and research</p>
+</header>
+
+<nav>
+  <a href="#auth">Password & Auth</a>
+  <a href="#web">Web Exploitation</a>
+  <a href="#enum">Discovery</a>
+  <a href="#misc">Misc</a>
+  <a href="#usage">Usage</a>
+  <a href="#credits">Credits</a>
+</nav>
+
+<main>
+
+  <section id="auth">
+    <h2>🔐 Password & Authentication</h2>
+    <ul>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/10k-most-common-password.txt" target="_blank">10k-most-common-password.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/4-digi-otp-combinations-modified-by-aman.txt" target="_blank">4-digi-otp-combinations-modified-by-aman.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/4-digits-0000-9999.txt" target="_blank">4-digits-0000-9999.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/6_digit_mix.txt" target="_blank">6_digit_mix.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/cirt-default-usernames.txt" target="_blank">cirt-default-usernames.txt</a></li>
+    </ul>
+  </section>
+
+  <section id="web">
+    <h2>🐞 Web Exploitation Payloads</h2>
+    <ul>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/12500-XSS-payloads.txt" target="_blank">12500-XSS-payloads.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/HTML5sec-Injections-Jhaddix.txt" target="_blank">HTML5sec-Injections-Jhaddix.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/LFI-Jhaddix-payloads.txt" target="_blank">LFI-Jhaddix-payloads.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/SSI-Injection-Jhaddix.txt" target="_blank">SSI-Injection-Jhaddix.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/sql-payloads.txt" target="_blank">sql-payloads.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/command-injection.txt" target="_blank">command-injection.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/open-redirect-payloads.txt" target="_blank">open-redirect-payloads.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/graphql.txt" target="_blank">graphql.txt</a></li>
+    </ul>
+  </section>
+
+  <section id="enum">
+    <h2>🧭 Discovery & Enumeration</h2>
+    <ul>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/combined_directories.txt" target="_blank">combined_directories.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/raft-large-directories-lowercase.txt" target="_blank">raft-large-directories-lowercase.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/raft-large-files.txt" target="_blank">raft-large-files.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/subdomains-top1million-110000.txt" target="_blank">subdomains-top1million-110000.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/subdomains-top1million-5000.txt" target="_blank">subdomains-top1million-5000.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/endpoints-payloads.txt" target="_blank">endpoints-payloads.txt</a></li>
+    </ul>
+  </section>
+
+  <section id="misc">
+    <h2>📦 Miscellaneous</h2>
+    <ul>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/master.txt" target="_blank">master.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/hydra.restore" target="_blank">hydra.restore</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/senstivejs.txt" target="_blank">senstivejs.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/common-payloads.txt" target="_blank">common-payloads.txt</a></li>
+      <li><a href="https://github.com/luci-a-u/Vault/blob/main/Payloads/Subdomain-Takeover.html" target="_blank">Subdomain-Takeover.html</a></li>
+    </ul>
+  </section>
+
+  <section id="usage">
+    <h2>📚 Usage</h2>
+    <p>Use these payloads with your favorite tools:</p>
+    <ul>
+      <li><a href="https://github.com/ffuf/ffuf" target="_blank">ffuf</a></li>
+      <li><a href="https://portswigger.net/burp" target="_blank">Burp Suite</a></li>
+      <li><a href="https://sqlmap.org/" target="_blank">sqlmap</a></li>
+      <li><a href="https://github.com/xmendez/wfuzz" target="_blank">wfuzz</a></li>
+      <li><a href="https://github.com/maurosoria/dirsearch" target="_blank">dirsearch</a></li>
+    </ul>
+  </section>
+
+  <section id="credits">
+    <h2>✨ Credits</h2>
+    <p>Inspired by the works of:</p>
+    <ul>
+      <li>Jhaddix</li>
+      <li>SecLists</li>
+      <li>HTML5 Security Cheat Sheets</li>
+      <li>Community Contributions (and Aman 😉)</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>⚠️ This is for educational and authorized testing purposes only. Use responsibly.</p>
+</footer>
+
+</body>
+</html>
