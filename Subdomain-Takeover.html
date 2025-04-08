@@ -6,9 +6,9 @@
     <title>Subdomain Secured</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0d0d0d;
+            color: #00ff00;
             text-align: center;
             padding: 2em;
             margin: 0;
@@ -16,60 +16,79 @@
             flex-direction: column;
             justify-content: center;
             height: 100vh;
+            animation: flicker 2s infinite;
         }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.98; }
+        }
+
         h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
         }
+
         p {
-            font-size: 1.25rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
             line-height: 1.6;
         }
+
         .details {
             text-align: left;
             margin: 1em auto;
             padding: 1.5em;
             border-radius: 8px;
-            max-width: 600px;
-            background: rgba(255, 255, 255, 0.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+            background-color: rgba(0, 255, 0, 0.05);
+            border: 1px solid #00ff00;
+            box-shadow: 0 0 20px #00ff00;
         }
+
         .details p {
             margin: 0.5em 0;
         }
+
         .details strong {
-            color: #ffd700; /* Highlighted field titles in gold */
+            color: #39ff14;
         }
+
         .details a {
-            color: #ffd700;
+            color: #00ffff;
             text-decoration: none;
-            transition: color 0.3s;
         }
+
         .details a:hover {
-            color: #fff;
+            color: #ffffff;
         }
+
         .cta {
-            margin-top: 1em;
+            margin-top: 1.5em;
         }
+
         .cta a {
             display: inline-block;
             padding: 0.75em 1.5em;
             font-size: 1.2rem;
-            color: #2575fc;
-            background: #fff;
+            color: #0d0d0d;
+            background: #00ff00;
             border-radius: 5px;
             text-decoration: none;
-            transition: background 0.3s, color 0.3s;
+            transition: background 0.3s ease;
         }
+
         .cta a:hover {
-            background: #ddd;
-            color: #2575fc;
+            background: #39ff14;
         }
+
         footer {
             margin-top: 2em;
             font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
+            color: #00ff00;
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -80,7 +99,7 @@
         <p><strong>Researcher Name:</strong> Aman Singh</p>
         <p><strong>Role:</strong> Bug Hunter at HackerOne</p>
         <p><strong>Email:</strong> knowledgehub0o0oo0@gmail.com</p>
-        <p><strong>Linkedin:</strong> <a href="https://www.linkedin.com/in/lucifer-a-u/" target="_blank">hackerone.com/luci_a_u</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/lucifer-a-u/" target="_blank">linkedin.com/in/lucifer-a-u</a></p>
         <p><strong>HackerOne:</strong> <a href="https://hackerone.com/luci_a_u" target="_blank">hackerone.com/luci_a_u</a></p>
         <p><strong>Twitter:</strong> <a href="https://x.com/luci_a_u" target="_blank">x.com/luci_a_u</a></p>
         <p><strong>Country:</strong> India</p>
@@ -93,5 +112,3 @@
     </footer>
 </body>
 </html>
-
-
