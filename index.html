@@ -5,61 +5,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vault by luci-a-u</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
     :root {
-      --bg: #f8f9fa;
-      --text: #1c1c1c;
-      --link: #0066cc;
-      --title: #212121;
-      --border: #e0e0e0;
+      --bg: #f9f9fb;
+      --text: #1e1e1e;
+      --link: #3fb950;
+      --title: #121212;
+      --border: #e1e1e1;
       --heading: #0056b3;
+      --card-bg: rgba(255, 255, 255, 0.8);
+      --header-bg: #ffffff;
+      --header-text: #000000;
     }
 
     [data-theme="dark"] {
-      --bg: #121212;
-      --text: #e0e0e0;
-      --link: #66aaff;
-      --title: #ffffff;
+      --bg: #0f0f0f;
+      --text: #dddddd;
+      --link: #3fb950;
+      --title: #f9f9f9;
       --border: #333;
       --heading: #66aaff;
+      --card-bg: rgba(18, 18, 18, 0.6);
+      --header-bg: #000000;
+      --header-text: #ffffff;
     }
-
+    
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Fira Code', monospace;
       background-color: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
     }
 
     header {
-      padding: 1rem 2rem;
-      background-color: var(--bg);
+      padding: 1.2rem 2rem;
+      background-color: var(--header-bg);
+      color: var(--header-text);
       border-bottom: 1px solid var(--border);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+      backdrop-filter: blur(6px);
     }
 
     header h1 {
       margin: 0;
-      font-size: 1.8rem;
-      color: var(--title);
-    }
-
-    .nav {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
+      font-size: 2rem;
     }
 
     .nav a {
       color: var(--link);
       text-decoration: none;
       font-weight: 500;
+      transition: color 0.3s;
+      margin-left: 1rem;
+    }
+    
+    .nav a:hover {
+      text-decoration: underline;
     }
 
     main {
@@ -70,26 +76,36 @@
 
     h2 {
       color: var(--heading);
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       margin-bottom: 1rem;
+    }
+    a {
+      color: var(--link);
+      text-decoration: none;
+      transition: color 0.3s;
     }
 
     .section {
       margin-bottom: 2rem;
-      padding: 1rem;
+      padding: 1.5rem;
+      background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      transition: transform 0.3s ease;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s;
     }
 
     .section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transform: scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     }
 
-    a {
-      color: var(--link);
-      text-decoration: none;
+    .toggle {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--link); /* updated */
     }
 
     .footer {
@@ -98,26 +114,36 @@
       color: var(--text);
       padding: 1rem;
       border-top: 1px solid var(--border);
+      margin-top: 2rem;
     }
 
-    .toggle {
-      cursor: pointer;
-      padding: 0.4rem 0.7rem;
-      background: none;
-      border: none;
-      font-size: 1.2rem;
-      color: var(--link);
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+      .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
+    a:hover {
+      text-decoration: underline;
+      color: #34a843; /* a slightly darker shade on hover */
+    }
+
   </style>
 </head>
+
 
 <body>
   <header>
     <h1>Cybersecurity Vault</h1>
     <div class="nav">
       <a href="index.html">Home</a>
-      <a href="Tools.html">Tools</a>
-      <a href="Payloads.html">Payloads</a>
+      <a href="Tools/Tools.html">Tools</a>
+      <a href="Payloads/Payloads.html">Payloads</a>
       <a href="Subdomain-Takeover.html">Takeovers</a>
       <a href="https://github.com/luci-a-u/Vault">GitHub</a>
       <button class="toggle" onclick="toggleTheme()" title="Toggle theme">🌙</button>
@@ -152,16 +178,22 @@
   <script>
     function toggleTheme() {
       const html = document.documentElement;
-      const theme = html.getAttribute("data-theme") === "light" ? "dark" : "light";
-      html.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
+      const currentTheme = html.getAttribute("data-theme");
+      const newTheme = currentTheme === "light" ? "dark" : "light";
+      html.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+
+      const toggleBtn = document.querySelector('.toggle');
+      toggleBtn.textContent = newTheme === "dark" ? "☀️" : "🌙";
     }
 
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    }
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('.toggle').textContent = savedTheme === "dark" ? "☀️" : "🌙";
+    });
   </script>
+
 </body>
 
 </html>
