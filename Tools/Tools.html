@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Security Tools Reference</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --link: #0366d6;
+      --title: #24292e;
+      --border: #e1e4e8;
+    }
+
+    [data-theme='dark'] {
+      --bg: #0d1117;
+      --text: #c9d1d9;
+      --link: #3fb950;
+      --title: #58a6ff;
+      --border: #30363d;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: var(--title);
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-top: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: 2px solid var(--border);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+      color: var(--text);
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85em;
+      color: var(--text);
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+  <h1>🛠️ Security Tools Reference</h1>
+  <p>A curated list of tools for penetration testing, red teaming, OSINT, defense, mobile testing, and more.</p>
+
+  <!-- 🔐 Web Application Security Testing -->
+  <div class="section">
+    <h2>🔐 Web Application Security Testing</h2>
+    <ul>
+      <li><a href="https://portswigger.net/burp">Burp Suite</a> – Web app testing</li>
+      <li><a href="https://www.acunetix.com/">Acunetix</a> – Vulnerability scanning</li>
+      <li><a href="https://github.com/FortyNorthSecurity/EyeWitness">EyeWitness</a> – Web screenshots</li>
+      <li><a href="https://github.com/MehediH/Mantra">Mantra</a> – Web app testing</li>
+      <li><a href="https://www.zaproxy.org/">OWASP ZAP</a> – Web vulnerability scanner</li>
+      <li><a href="https://github.com/EnableSecurity/wafw00f">Wafw00f</a> – WAF detection</li>
+    </ul>
+  </div>
+
+  <!-- 🌐 Network Scanning and Discovery -->
+  <div class="section">
+    <h2>🌐 Network Scanning and Discovery</h2>
+    <ul>
+      <li><a href="https://nmap.org/">Nmap</a> – Network scanning</li>
+      <li><a href="https://chaos.projectdiscovery.io/">Chaos Project Discovery</a> – Recon and OSINT</li>
+      <li><a href="https://github.com/owasp-amass/amass">Amass</a> – Domain enumeration</li>
+      <li><a href="https://github.com/projectdiscovery/httpx">httpx</a> – HTTP probing</li>
+      <li><a href="https://github.com/robertdavidgraham/masscan">Masscan</a> – Fast scanner</li>
+      <li><a href="https://github.com/RustScan/RustScan">Rustscan</a> – Low-resource scanner</li>
+      <li><a href="https://angryip.org/">Angry IP Scanner</a> – Simple IP scanner</li>
+      <li><a href="https://github.com/projectdiscovery/naabu">Naabu</a> – Port scanning</li>
+      <li><a href="https://github.com/projectdiscovery/dnsx">Dnsx</a> – DNS recon</li>
+      <li><a href="https://www.wireshark.org/">Wireshark</a> – Packet inspection</li>
+    </ul>
+  </div>
+
+  <!-- 🏷️ Subdomain Discovery -->
+  <div class="section">
+    <h2>🏷️ Subdomain Discovery</h2>
+    <ul>
+      <li><a href="https://github.com/projectdiscovery/subfinder">Subfinder</a></li>
+      <li><a href="https://github.com/projectdiscovery/shuffledns">Shuffledns</a></li>
+      <li><a href="https://github.com/LukaSikic/subzy">Subzy</a></li>
+      <li><a href="https://github.com/abhyudaya/subzack">Subzack</a></li>
+      <li><a href="https://github.com/lc/subjs">Subjs</a></li>
+      <li><a href="https://github.com/tomnomnom/assetfinder">Assetfinder</a></li>
+    </ul>
+  </div>
+
+  <!-- 🐙 GitHub Recon -->
+  <div class="section">
+    <h2>🐙 GitHub Recon</h2>
+    <ul>
+      <li><a href="https://github.com/arthaud/git-dumper">GitDocker</a></li>
+      <li><a href="https://github.com/hisxo/gitGraber">GitGrabber</a></li>
+      <li><a href="https://github.com/trufflesecurity/trufflehog">TruffleHog</a></li>
+    </ul>
+  </div>
+
+  <!-- ☁️ Get Leaked Buckets -->
+  <div class="section">
+    <h2>☁️ Get Leaked Buckets</h2>
+    <ul>
+      <li><a href="https://github.com/nahamsec/lazys3">Lazys3</a></li>
+      <li><a href="https://github.com/sa7mon/S3Scanner">S3scanner</a></li>
+    </ul>
+  </div>
+
+  <!-- 🧪 Vulnerability Testing -->
+  <div class="section">
+    <h2>🧪 Vulnerability Testing</h2>
+    <ul>
+      <li><a href="https://github.com/sqlmapproject/sqlmap">SQLMap</a></li>
+      <li><a href="https://github.com/projectdiscovery/nuclei">Nuclei</a></li>
+      <li><a href="https://github.com/offensive-security/exploitdb">Searchsploit</a></li>
+      <li><a href="https://xsshunter.com/">XSSHunter</a></li>
+      <li><a href="https://www.metasploit.com/">Metasploit</a></li>
+    </ul>
+  </div>
+
+  <!-- 🔓 Password Cracking -->
+  <div class="section">
+    <h2>🔓 Password Cracking</h2>
+    <ul>
+      <li><a href="https://hashcat.net/hashcat/">Hashcat</a></li>
+      <li><a href="https://www.openwall.com/john/">John the Ripper</a></li>
+    </ul>
+  </div>
+
+  <!-- 🔍 Information Gathering -->
+  <div class="section">
+    <h2>🔍 Information Gathering</h2>
+    <ul>
+      <li><a href="https://github.com/devanshbatham/paramspider">Paramspider</a></li>
+      <li><a href="https://crt.sh/">crt.sh</a></li>
+      <li><a href="https://github.com/devanshbatham/OpenRedireX">Oeforall</a></li>
+      <li><a href="https://search.arin.net/rdap/">ARIN WHOIS</a></li>
+      <li><a href="https://bgp.he.net/">BGP He</a></li>
+      <li><a href="https://viewdns.info/">ViewDNS.info</a></li>
+      <li><a href="https://www.whoxy.com/">WhoXY</a></li>
+      <li><a href="https://mxtoolbox.com/">MXToolbox</a></li>
+      <li><a href="https://who.is/">Who.is</a></li>
+      <li><a href="https://lopseg.com.br/tools/">Lopseg</a></li>
+      <li><a href="https://ipaddressguide.com/cidr">IP Address Guide</a></li>
+    </ul>
+  </div>
+
+  <!-- 💥 Fuzzing -->
+  <div class="section">
+    <h2>💥 Fuzzing</h2>
+    <ul>
+      <li><a href="https://github.com/ffuf/ffuf">ffuf</a></li>
+    </ul>
+  </div>
+
+  <!-- 🧬 Sensitive Data Discovery -->
+  <div class="section">
+    <h2>🧬 Sensitive Data Discovery</h2>
+    <ul>
+      <li><a href="https://github.com/m4ll0k/SecretFinder">Secret Finder</a></li>
+    </ul>
+  </div>
+
+  <!-- 🤖 Automation and Recon -->
+  <div class="section">
+    <h2>🤖 Automation and Recon</h2>
+    <ul>
+      <li><a href="https://github.com/projectdiscovery/katana">Katana</a></li>
+      <li><a href="https://github.com/six2dez/reconftw">ReconFTW</a></li>
+    </ul>
+  </div>
+
+  <!-- 🔗 Link Testing -->
+  <div class="section">
+    <h2>🔗 Link Testing</h2>
+    <ul>
+      <li><a href="https://www.deadlinkchecker.com/">Broken Link Checker</a></li>
+    </ul>
+  </div>
+
+  <!-- 🛰️ ASN and CIDR Mapping -->
+  <div class="section">
+    <h2>🛰️ ASN and CIDR Mapping</h2>
+    <ul>
+      <li><a href="https://github.com/projectdiscovery/asnmap">Asnmap</a></li>
+      <li><a href="https://github.com/projectdiscovery/mapcidr">Mapcidr</a></li>
+    </ul>
+  </div>
+
+  <!-- 🛡️ Defensive Security Tools -->
+  <div class="section">
+    <h2>🛡️ Defensive Security Tools</h2>
+    <ul>
+      <li><a href="https://www.ossec.net/">OSSEC</a></li>
+      <li><a href="https://suricata.io/">Suricata</a></li>
+      <li><a href="https://www.snort.org/">Snort</a></li>
+      <li><a href="https://wazuh.com/">Wazuh</a></li>
+      <li><a href="https://securityonion.net/">Security Onion</a></li>
+    </ul>
+  </div>
+
+  <!-- 💾 Forensics & Memory Analysis -->
+  <div class="section">
+    <h2>💾 Forensics & Memory Analysis</h2>
+    <ul>
+      <li><a href="https://github.com/volatilityfoundation/volatility">Volatility</a></li>
+      <li><a href="https://www.sleuthkit.org/autopsy/">Autopsy</a></li>
+      <li><a href="https://github.com/ReFirmLabs/binwalk">Binwalk</a></li>
+      <li><a href="https://www.fireeye.com/services/freeware/redline.html">Redline</a></li>
+      <li><a href="https://exiftool.org/">ExifTool</a></li>
+    </ul>
+  </div>
+
+  <!-- 🎭 Payload Generation & Obfuscation -->
+  <div class="section">
+    <h2>🎭 Payload Generation & Obfuscation</h2>
+    <ul>
+      <li><a href="https://docs.metasploit.com/docs/using-metasploit/msfvenom.html">MSFvenom</a></li>
+      <li><a href="https://github.com/Veil-Framework/Veil">Veil</a></li>
+      <li><a href="https://github.com/Screetsec/TheFatRat">TheFatRat</a></li>
+      <li><a href="https://www.shellterproject.com/">Shellter</a></li>
+    </ul>
+  </div>
+
+  <!-- 🕵️ OSINT Tools -->
+  <div class="section">
+    <h2>🕵️ OSINT Tools</h2>
+    <ul>
+      <li><a href="https://github.com/laramies/theHarvester">theHarvester</a></li>
+      <li><a href="https://www.maltego.com/">Maltego</a></li>
+      <li><a href="https://github.com/smicallef/spiderfoot">Spiderfoot</a></li>
+      <li><a href="https://github.com/lanmaster53/recon-ng">Recon-ng</a></li>
+      <li><a href="https://github.com/sherlock-project/sherlock">Sherlock</a></li>
+    </ul>
+  </div>
+
+  <!-- 📱 Mobile Security Testing -->
+  <div class="section">
+    <h2>📱 Mobile Security Testing</h2>
+    <ul>
+      <li><a href="https://github.com/MobSF/Mobile-Security-Framework-MobSF">MobSF</a></li>
+      <li><a href="https://frida.re/">Frida</a></li>
+      <li><a href="https://github.com/sensepost/objection">Objection</a></li>
+    </ul>
+  </div>
+
+  <!-- 🧠 Wordlists & Dictionaries -->
+  <div class="section">
+    <h2>🧠 Wordlists & Dictionaries</h2>
+    <ul>
+      <li><a href="https://github.com/danielmiessler/SecLists">SecLists</a></li>
+      <li><a href="https://github.com/fuzzdb-project/fuzzdb">FuzzDB</a></li>
+      <li><a href="https://github.com/brannondorsey/naive-hashcat/releases">RockYou.txt</a></li>
+    </ul>
+  </div>
+
+  <!-- 🧰 Useful Utilities -->
+  <div class="section">
+    <h2>🧰 Useful Utilities</h2>
+    <ul>
+      <li><a href="https://gchq.github.io/CyberChef/">CyberChef</a></li>
+      <li><a href="https://www.base64decode.org/">Base64 Decode</a></li>
+      <li><a href="https://dnsdumpster.com/">DnsDumpster</a></li>
+      <li><a href="https://haveibeenpwned.com/">HaveIBeenPwned</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    Created with ❤️ by Aman | Powered by GitHub Pages
+  </footer>
+
+  <script>
+    const toggleTheme = () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+    };
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  </script>
+
+</body>
+</html>
