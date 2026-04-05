@@ -1,8 +1,4 @@
 <!-- Add a banner image or logo below -->
-<p align="center">
-  <!-- Replace the src URL with your image path -->
-  <img src="https://raw.githubusercontent.com/luci-a-u/Vault/refs/heads/main/vault.jpg" alt="Cybersecurity Vault Banner" width="600">
-</p>
 
 # 🛡️ Cybersecurity Vault
 
